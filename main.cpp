@@ -3,6 +3,9 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include "HelperFunctions.h"
+#include "Pixels.h"
+
 using namespace std;
 
 
