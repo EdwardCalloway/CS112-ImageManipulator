@@ -1,15 +1,35 @@
-#include <string>
 #include <iostream>
-#include <fstream>
 #include <vector>
-#include <sstream>
-#include "HelperFunctions.h"
-#include "Pixels.h"
-
+#include <exception>
+#include <fstream>
+#include <string>
 using namespace std;
 
+int main() {
+	string line;
+	fstream myfile("tinypix.ppm");
 
-int main(int argc, char* argv[])
-{
-	//TODO: put your code here
+
+
+	int linechecker = 0;
+	if (myfile.is_open())
+	{
+
+		while (getline(myfile, line))
+		{
+	
+			
+				cout << line << '\n';
+			
+
+		}
+		myfile.close();
+
+	}
+
+	else cout << "Unable to open file";
+
+
+
+	return 0;
 }

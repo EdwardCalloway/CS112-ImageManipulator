@@ -138,6 +138,10 @@
   <ItemGroup>
     <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="Pixels.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ImageEditor.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
