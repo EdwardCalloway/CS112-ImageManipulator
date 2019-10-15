@@ -7,7 +7,15 @@ using namespace std;
 
 int main() {
 	string line;
-	fstream myfile("tinypix.ppm");
+	string _inputfile = "";
+	string _outputfile = "";
+	cout << "Please input a file you would like to read\n";
+	cin >> _inputfile;
+	ifstream myfile(_inputfile);
+	cout << "Please select your output file\n";
+	cin >> _outputfile;
+
+
 
 
 
