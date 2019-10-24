@@ -5,6 +5,7 @@
 #include <sstream>
 #include <fstream>
 #include <istream>
+#include <cstdlib>
 using namespace std;
 
 class Pixels {
@@ -58,6 +59,57 @@ public:
 		_red = average;
 		_green = average;
 		_blue = average;
+	}
+
+	void AddNoise() {
+		int RandomInt = rand() % 11 + -11;
+
+		_red = _red + RandomInt;
+		if (_red > 255) {
+			_red = 255;
+		}
+		if (_red < 0) {
+			_red = 0;
+		}
+
+		_green = _green + RandomInt;
+		if (_green > 255) {
+			_green = 255;
+		}
+		if (_green < 0) {
+			_green = 0;
+		}
+
+		_blue = _blue + RandomInt;
+		if (_blue > 255) {
+			_blue = 255;
+		}
+		if (_blue < 0) {
+			_blue = 0;
+		}
+	}
+
+	void HighContrast() {
+		if (_red <= 127) {
+			_red = 0;
+		}
+		else {
+			_red = 255;
+		}
+
+		if (_green <= 127) {
+			_green = 0;
+		}
+		else {
+			_green = 255;
+		}
+
+		if (_blue <= 127) {
+			_blue = 0;
+		}
+		else {
+			_blue = 255;
+		}
 	}
 };
 

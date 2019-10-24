@@ -29,11 +29,18 @@ int main() {
 	cout << "5: Negate Green\n";
 	cout << "6: Negate Blue\n";
 	cout << "7: Grayscale\n";
+	cout << "8: Add Noise\n";
+	cout << "9: High Contrast\n";
+	cout << "Q: Quit\n";
 	cin >> Modifier;
 
 	if (Modifier <= -1 || Modifier >= 8) {
 		cout << "You chose an unacceptable modifier, no change will occur.";
 		Modifier = 0;
+	}
+
+	else if (Modifier == 'Q') {
+		cout << "Exiting program";
 	}
 
 	int linechecker = 0;
@@ -51,6 +58,7 @@ int main() {
 		myfile.close();
 
 	}
+
 
 	else cout << "Unable to open file";
 
